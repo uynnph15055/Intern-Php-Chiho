@@ -25,6 +25,8 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+
+// Screen Desktop
 .container-fluid {
   padding-left: 0px !important;
   padding-right: 0px !important;
@@ -73,11 +75,13 @@ body {
   &__title {
     padding: 20px 0px;
     &--sub {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
+      font-weight: bold;
       color: $primary-color;
     }
     &--main {
       color: $black-color;
+      word-break: break-all;
       font: {
         size: 3rem;
         weight: bold;
@@ -89,6 +93,7 @@ body {
     &--content {
       padding-right: 50px;
       font-size: 1.2rem;
+      color: darken($black-color , 100%);
       line-height: $lineHeight;
     }
 
@@ -102,8 +107,9 @@ body {
 .content {
   &__feature {
     position: relative;
-    background-image: linear-gradient(#d2f5fe, #84e1f8);
+    background-image: linear-gradient(#d2f5fe, #d2f5fe);
     &--title {
+      font-weight: bold;
       color: $primary-color;
     }
     &--title {
@@ -111,7 +117,9 @@ body {
       color: $primary-color;
     }
     &--description {
+      color: darken($black-color , 100%);
       margin-top: 20px;
+      font-size: 1.3rem;
       line-height: $lineHeight;
     }
     &--image--box {
@@ -141,6 +149,7 @@ body {
     &--title {
       color: $yelow-color;
       font-size: 1.5rem;
+      font-weight: bold;
     }
 
     &--ask {
@@ -151,7 +160,7 @@ body {
 
     &--description {
       color: $white-color;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       line-height: $lineHeight;
       line-height: $lineHeight;
       margin-bottom: 30px;
@@ -161,13 +170,15 @@ body {
       text-align: center;
       border: 2px solid $white-color;
       padding: 10px 30px;
-      background-color: $green-color;
+      background-color: #01961d;
       border-radius: 50px;
     }
 
     &--position {
+      word-break: break-all;
       margin-bottom: 0px;
       color: $white-color;
+      padding: 0px 55px;
     }
     &--auth {
       margin-bottom: 0px;
@@ -199,11 +210,11 @@ body {
     }
     &--title {
       color: $black-color;
-      font-weight: bold;
       font-size: 1.2rem;
     }
     &--sub--title {
       font-weight: bold;
+      color: darken($black-color, 100%);
       font-size: 1.7rem;
     }
     &--description {
@@ -221,6 +232,7 @@ body {
     &--title {
       color: $primary-color;
       font-weight: bold;
+      word-break: break-all;
     }
     &--item {
       padding-top: 70px;
@@ -230,6 +242,10 @@ body {
       }
       &--description {
         font-size: 1.2rem;
+        color: lighten(#000000, 25%);
+        font-weight: bold;
+        margin-top: 80px;
+        line-height: $lineHeight;
       }
     }
   }
@@ -250,64 +266,10 @@ body {
     }
     &--step {
       &--title {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         font-weight: bold;
         margin-top: 50px;
-      }
-      &--col-1 {
-        background-color: #c9c9ca;
-        padding-left: 15px;
-        font-weight: bold;
-        font-size: 1.2rem;
-        color: #000;
-      }
-      &--col-2 {
-        background-color: #122a88;
-        color: $white-color;
-        padding: 10px 20px;
-        font-weight: bold;
-        &.other {
-          line-height: 1.25;
-          background-color: #595656;
-        }
-      }
-
-      &--col-3 {
-        background-color: $white-color;
-        padding: 10px;
-        text-align: center;
-        border: 2px solid $black-color;
-
-        p {
-          &:first-child {
-            margin-bottom: 5px;
-          }
-          &:last-child {
-            color: $primary-color;
-          }
-        }
-      }
-
-      &--table {
-        p {
-          margin-bottom: 0;
-        }
-        border-collapse: separate;
-        border-spacing: 20px 20px;
-        &--th {
-          text-align: center;
-          background-color: #122a88;
-          color: $white-color;
-          padding: 10px 10px;
-        }
-        .name-cate {
-          font-weight: bold;
-        }
-        .tr-end {
-          background-color: #eeefef;
-          border: 3px solid #122a88;
-          font-size: 16px;
-        }
+        color: darken(#000, 100%);
       }
 
       &--list {
@@ -317,6 +279,7 @@ body {
         li {
           margin-bottom: 20px;
           font-weight: bold;
+          font-size: 1.2rem;
           img {
             margin-right: 10px;
           }
@@ -325,7 +288,7 @@ body {
 
       &--wraper {
         position: relative;
-        min-height: 400px;
+        min-height: 460px;
         min-width: 745px;
       }
 
@@ -340,11 +303,11 @@ body {
 
         &--title {
           color: $primary-color;
-          font-weight: 600;
-          font-size: 1.2rem;
+          font-weight: bold;
+          font-size: 1.4rem;
         }
         &--info {
-          padding-left: 50px;
+          padding-left: 20px;
           font-weight: bold;
         }
         &--more {
@@ -411,6 +374,8 @@ body {
   }
 }
 
+
+// Responsive Screen Mobile
 @media only screen and (max-width: 740px) {
   .header {
     &__menu {
@@ -423,6 +388,7 @@ body {
   .discription {
     margin-top: -20px;
     &__title--sub {
+      word-break: break-all;
       padding: 0px 70px;
     }
     &__title--main {
@@ -452,7 +418,8 @@ body {
         margin-top: 20px;
       }
       &--description {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+       color: darken($black-color , 100%);
         text-align: justify;
       }
       &--image--box {
@@ -512,7 +479,6 @@ body {
       &--sub--title {
         font-weight: bold;
         font-size: 2.2rem;
-        color: lighten($black-color, 20%);
       }
     }
 
@@ -537,7 +503,7 @@ body {
     }
 
     &__practice {
-      padding: 70px 0px;
+      padding: 50px 0px;
       &--title {
         font-weight: bolder;
         padding-right: 80px;
@@ -548,15 +514,14 @@ body {
         }
       }
     }
-
-   
   }
 
   .footer {
     &__btn {
-      padding: 5px 10px;
+      padding: 5px 15px;
       margin-left: 20px;
       border: none;
+      font-weight: bold;
       border-radius: 50px;
     }
 
@@ -571,8 +536,6 @@ body {
     .mobie{
       display: block;   
     }
-  
-  
 
     &__contact-end{
       font-size: 0.8rem;
